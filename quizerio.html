@@ -11,10 +11,16 @@
     <title>Quizerio</title>
 </head>
 <body>
+   
     <section>
         <div class="container">
             <h1>Quizerio</h1>
             <div class="quiz-wrapper">
+                <div class="js-completed no-show">
+                    <h1>Quiz completed!</h1>
+                    <p>Your score:</p>
+                    <p class="js-score-completed"></p>
+                </div>                 
                 <p class="question js-question">Question?</p>
                 <button data-answer-index="0" onclick="checkAnswer(this)">Answer 1</button>
                 <button data-answer-index="1" onclick="checkAnswer(this)">Answer 2</button>
@@ -22,11 +28,14 @@
                 <button data-answer-index="3" onclick="checkAnswer(this)">Answer 4</button>
                 <p class="js-answer"></p>
             </div>
+                <div class="score-counter">
+                <h3>Your score:</h3>
+                <p class="js-score">0</p>
+                </div>
         </div>
     </section>
-    <div class="js-completed no-show">
-        <h1>Quiz completed!</h1>
-    </div>
+   
+    
 
 
     <script src="/scripts/questions.js"></script>

@@ -16,12 +16,19 @@ function loadQuestion() {
     });
 }
 
+let score = 0;
+
 function checkAnswer(clickedButton) {
     const selectedAnswerIndex = parseInt(clickedButton.dataset.answerIndex, 10);
     const answerMsg = document.querySelector('.js-answer');
+    
 
     if (selectedAnswerIndex === questions[currentQuestionIndex].correctIndex) {
+        const scoreElement = document.querySelector('.js-score')
         answerMsg.textContent = 'Correct answer';
+        score++;
+        scoreElement.innerHTML = `${score}`;
+
     } else {
         answerMsg.textContent = 'Wrong answer';
     }
@@ -37,6 +44,7 @@ function checkAnswer(clickedButton) {
             loadQuestion();
         } else {
             document.querySelector('.js-completed').classList.remove('no-show');
+            document.querySelector('.js-score-completed').innerHTML = `${score}`
         }
     }, 1000); 
 }

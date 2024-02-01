@@ -4,6 +4,7 @@ h1 {
 }
 
 .quiz-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,4 +26,16 @@ button {
     color: var(--text-black);
     border-radius: 0.5rem;
     width: 30rem;
+}
+
+.score-counter h3 {
+    font-size: 3rem;
+}
+
+.score-counter p {
+    font-size: 3rem;
+}
+
+.js-completed p {
+    font-size: 2rem;
 }

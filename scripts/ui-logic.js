@@ -36,7 +36,7 @@ function checkAnswer(clickedButton) {
         if (currentQuestionIndex < questions.length) {
             loadQuestion();
         } else {
-            alert('Quiz completed!');
+            document.querySelector('.js-completed').classList.remove('no-show');
         }
     }, 1000); 
 }

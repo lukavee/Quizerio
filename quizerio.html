@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Styles-->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/ui.css">
+    
     <title>Quizerio</title>
 </head>
 <body>
-    
+    <section>
+        <div class="container">
+            <h1>Quizerio</h1>
+            <div class="quiz-wrapper">
+                <p class="question js-question">Question?</p>
+                <button data-answer-index="0" onclick="checkAnswer(this)">Answer 1</button>
+                <button data-answer-index="1" onclick="checkAnswer(this)">Answer 2</button>
+                <button data-answer-index="2" onclick="checkAnswer(this)">Answer 3</button>
+                <button data-answer-index="3" onclick="checkAnswer(this)">Answer 4</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/scripts/questions.js"></script>
 </body>
 </html>

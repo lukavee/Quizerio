@@ -1,51 +1,46 @@
 
 const questions = [
     {
-        question: 'What is the capital of Belgrade?',
-        answers: ['Nis', 'Belgrade', 'Novi Sad', 'Blace'],
+        question: 'Green owl is the mascot for which app?',
+        answers: ['Spotify', 'Tinder', 'Duolingo', 'Facebook'],
+        correctIndex: 2
+    },
+
+    {
+        question: 'In what decade was Madonna born?',
+        answers: ['1950s', '1940s', '1960', '1970'],
+        correctIndex: 0
+    },
+
+    {
+        question: 'What is the meaning of ‘Hakuna Matata’?',
+        answers: ['Goodnight', 'Thank you', 'No worries', 'Love you'],
+        correctIndex: 2
+    },
+    
+    {
+        question: 'What type of computer was the first laptop computer?',
+        answers: ['Apple Macintosh', 'TIBM PC', 'Windows XP', 'Osborne 1'],
+        correctIndex: 3
+    },
+    
+    {
+        question: 'What is the largest social media network in the world?',
+        answers: ['Twitter', 'Facebook', 'Instagram', 'Telegram'],
         correctIndex: 1
     },
+    
     {
-        question: 'What is the HTML?',
-        answers: ['Code editor', 'Programming language', 'Markup language', 'Web design tool'],
+        question: 'What year was the iPhone first released in?',
+        answers: ['2002', '2014', '2007', '2010'],
         correctIndex: 2
-    }  
+    },
+    
+   
 ];
 
-let currentQuestionIndex = 0;
 
-loadQuestion();
 
-function loadQuestion() {
-    const currentQuestion = questions[currentQuestionIndex];
-
-    // Update Question
-    document.querySelector('.js-question').textContent = currentQuestion.question;
-
-    // Update answer buttons 
-    const answerButtons = document.querySelectorAll('.quiz-wrapper button');
-    answerButtons.forEach((button, index) => {
-        button.textContent = currentQuestion.answers[index];
-    });
-}
-
-function checkAnswer(clickedButton) {
-    const selectedAnswerIndex = parseInt(clickedButton.dataset.answerIndex, 10);
-
-    if(selectedAnswerIndex === questions[currentQuestionIndex].correctIndex) {
-        alert('Correct');
-    } else {
-        alert('Incorrect');
-    }
-
-    // Move to the next question or end the quiz
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        loadQuestion();
-    } else {
-        alert('Quiz completed!');
-    }
-}
 
 
 

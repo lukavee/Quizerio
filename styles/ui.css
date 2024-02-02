@@ -1,6 +1,8 @@
 h1 {
     text-align: center;
     font-size: 6rem;
+    font-family: 'Sixtyfour', sans-serif;
+    color: var(--secondary);
 }
 
 .quiz-wrapper {
@@ -15,6 +17,8 @@ h1 {
 
 .question {
     font-size: 4rem;
+    text-align: center;
+    padding-bottom: 3rem;
 }
 
 button {
@@ -26,6 +30,17 @@ button {
     color: var(--text-black);
     border-radius: 0.5rem;
     width: 30rem;
+    font-size: 2rem;
+}
+
+.score-counter {
+    position: absolute;
+    bottom: 0;
+    left: 3rem;
+    border: 5px dotted var(--secondary);
+    max-width: 20rem;
+    text-align: center;
+    padding: 2rem;
 }
 
 .score-counter h3 {
@@ -38,4 +53,8 @@ button {
 
 .js-completed p {
     font-size: 2rem;
+}
+
+.js-answer {
+    font-size: 3rem;
 }

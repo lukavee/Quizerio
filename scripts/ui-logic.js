@@ -24,13 +24,18 @@ function checkAnswer(clickedButton) {
     
 
     if (selectedAnswerIndex === questions[currentQuestionIndex].correctIndex) {
-        const scoreElement = document.querySelector('.js-score')
-        answerMsg.textContent = 'Correct answer';
+        const soundCorrect = document.querySelector('.js-correct-sound');
+        const scoreElement = document.querySelector('.js-score');
+        answerMsg.textContent = 'Correct answer ✅';
+        soundCorrect.play();
         score++;
         scoreElement.innerHTML = `${score}`;
 
     } else {
-        answerMsg.textContent = 'Wrong answer';
+        answerMsg.textContent = 'Wrong answer ❌';
+        const soundFail = document.querySelector('.js-fail-sound');
+        soundFail.play();
+
     }
 
    
@@ -43,8 +48,14 @@ function checkAnswer(clickedButton) {
         if (currentQuestionIndex < questions.length) {
             loadQuestion();
         } else {
+            const endgameSound = document.querySelector('.js-end-game');
+            const quizWrapper = document.querySelector('.js-quiz-wrapper');
+            const scoreCounter = document.querySelector('.js-score-counter');
+            quizWrapper.classList.add('no-show');
+            scoreCounter.classList.add('no-show');
+            endgameSound.play();
             document.querySelector('.js-completed').classList.remove('no-show');
             document.querySelector('.js-score-completed').innerHTML = `${score}`
         }
-    }, 1000); 
+    }, 2000); 
 }

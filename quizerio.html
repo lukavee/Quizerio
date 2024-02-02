@@ -7,20 +7,30 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/ui.css">
     <link rel="stylesheet" href="/styles/interactive.css">
+    <link rel="stylesheet" href="/styles/hover.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
     
     <title>Quizerio</title>
 </head>
 <body>
-   
+    <!--Sounds-->
+   <audio class="js-fail-sound" src="/sounds/arcade-fail-quizerio.mp3"></audio>
+   <audio class="js-correct-sound" src="/sounds/arcade-sucsess-quizerio.mp3"></audio>
+   <audio class="js-end-game" src="/sounds/end-game-quizerio.mp3"></audio>
+   <!--Content-->
     <section>
         <div class="container">
             <h1>Quizerio</h1>
-            <div class="quiz-wrapper">
-                <div class="js-completed no-show">
-                    <h1>Quiz completed!</h1>
-                    <p>Your score:</p>
-                    <p class="js-score-completed"></p>
-                </div>                 
+            <div class="js-completed no-show">
+                <h1>Quiz completed!</h1>
+                <p>Your score:</p>
+                <p class="js-score-completed"></p>
+            </div>
+            <div class="quiz-wrapper js-quiz-wrapper">
+                <div></div>                 
                 <p class="question js-question">Question?</p>
                 <button data-answer-index="0" onclick="checkAnswer(this)">Answer 1</button>
                 <button data-answer-index="1" onclick="checkAnswer(this)">Answer 2</button>
@@ -28,7 +38,7 @@
                 <button data-answer-index="3" onclick="checkAnswer(this)">Answer 4</button>
                 <p class="js-answer"></p>
             </div>
-                <div class="score-counter">
+                <div class="score-counter js-score-counter">
                 <h3>Your score:</h3>
                 <p class="js-score">0</p>
                 </div>
@@ -37,7 +47,7 @@
    
     
 
-
+    <!--Scripts-->
     <script src="/scripts/questions.js"></script>
     <script src="/scripts/ui-logic.js"></script>
 </body>

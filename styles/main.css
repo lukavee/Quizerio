@@ -1,7 +1,7 @@
 :root {
-    --primary: #1cd2c3;
-    --secondary: #e4748c;
-    --tertiary: #1d696b;
+    --primary: #6700ff;
+    --secondary: #f500ff;
+    --tertiary: #b700ff;
     --text-white: rgba(255, 255, 255, 1);
     --text-black: rgba(11, 13, 23, 1);
   }

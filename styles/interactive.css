@@ -2,7 +2,7 @@
     display: none;
 }
 
-.js-completed {
+.completed {
     top: 0;
     left: 0;
     background-color: #fff;
@@ -11,6 +11,10 @@
     width: 100%; 
     text-align: center; 
     animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.completed p {
+    font-size: 3rem;
 }
 
 
